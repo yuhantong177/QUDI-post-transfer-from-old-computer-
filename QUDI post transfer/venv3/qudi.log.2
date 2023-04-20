@@ -1,0 +1,110 @@
+2023-04-13 13:09:47 info __main__ Loading Qudi...
+2023-04-13 13:09:50 error core.util.helpers No Package "git" installed! It is recommended to have this package installed. Perform e.g.
+
+    pip install gitpython
+
+in the console to install the missing package.
+2023-04-13 13:09:51 warning py.warnings C:\Users\Public\confocal\qudi-master\qudi-master\core\__main__.py:134: DeprecationWarning: zmq.eventloop.ioloop is deprecated in pyzmq 17. pyzmq now works with default tornado and asyncio eventloops.
+  ioloop.install()
+
+2023-04-13 13:09:51 debug core.manager Main thread is <sip.voidptr object at 0x000001D44CE82330>
+2023-04-13 13:09:51 info core.manager load.cfg config file found at C:\Users\Public\confocal\qudi-master\qudi-master\config\load.cfg
+2023-04-13 13:09:51 info core.manager Starting Manager configuration from C:/Users/Public/confocal/qudi-master/qudi-master/config/example/default.cfg
+2023-04-13 13:09:51 info core.manager Manager configuration complete.
+2023-04-13 13:09:51 debug core.threadmanager Creating thread: "rpyc-server".
+2023-04-13 13:09:51 info core.remote Started module server at localhost on port 12345
+2023-04-13 13:09:51 info core.manager Started server rpyc://localhost:12345
+2023-04-13 13:09:51 info core.manager Qudi started.
+2023-04-13 13:09:51 info core.manager Loading module ".gui.manager.managergui"
+2023-04-13 13:09:51 info RemoteModule/12345 server started on [127.0.0.1]:12345
+2023-04-13 13:09:53 info core.manager Configuring ManagerGui as man
+2023-04-13 13:09:53 debug gui.manager.managergui.ManagerGui Activation in thread <sip.voidptr object at 0x000001D44F072180>
+2023-04-13 13:09:56 debug gui.manager.managergui.ManagerGui IPy activation in thread <sip.voidptr object at 0x000001D44F085A80>
+2023-04-13 13:09:56 info gui.manager.managergui.ManagerGui IPython has kernel True
+2023-04-13 13:09:56 info gui.manager.managergui.ManagerGui IPython kernel alive True
+2023-04-13 13:09:57 debug core.manager Activation success: True
+2023-04-13 13:09:57 info core.manager Loading module ".gui.trayicon"
+2023-04-13 13:09:57 info core.manager Configuring TrayIcon as tray
+2023-04-13 13:09:57 debug gui.trayicon.TrayIcon Activation in thread <sip.voidptr object at 0x000001D451C02F60>
+2023-04-13 13:09:57 debug core.manager Activation success: True
+2023-04-13 13:09:57 info core.manager Loading module ".logic.taskrunner"
+2023-04-13 13:09:57 info core.manager Configuring TaskRunner as tasklogic
+2023-04-13 13:09:57 debug core.threadmanager Creating thread: "mod-logic-tasklogic".
+2023-04-13 13:09:57 debug logic.taskrunner.TaskRunner Activation in thread <sip.voidptr object at 0x000001D452022510>
+2023-04-13 13:09:57 info core.manager Task runner registered.
+2023-04-13 13:09:57 info core.manager Loading module ".hardware.national_instruments_x_series"
+2023-04-13 13:09:58 info core.manager Configuring NationalInstrumentsXSeries as nicard_6363
+2023-04-13 13:09:58 warning hardware.national_instruments_x_series.NationalInstrumentsXSeries No variable >> odmr_trigger_line << configured, using default value None instead.
+2023-04-13 13:09:58 warning hardware.national_instruments_x_series.NationalInstrumentsXSeries No variable >> odmr_switch_line << configured, using default value None instead.
+2023-04-13 13:09:58 debug hardware.national_instruments_x_series.NationalInstrumentsXSeries Activation in thread <sip.voidptr object at 0x000001D4520227E0>
+2023-04-13 13:09:58 debug core.manager Activation success: True
+2023-04-13 13:09:58 info core.manager Loading module ".logic.interfuse.scanner_tilt_interfuse"
+2023-04-13 13:09:58 info core.manager Configuring ScannerTiltInterfuse as scanner_tilt_interfuse
+2023-04-13 13:09:58 info core.manager Connecting logic.scanner_tilt_interfuse.confocalscanner1 to hardware.nicard_6363
+2023-04-13 13:09:58 debug core.threadmanager Creating thread: "mod-logic-scanner_tilt_interfuse".
+2023-04-13 13:09:58 debug logic.interfuse.scanner_tilt_interfuse.ScannerTiltInterfuse Activation in thread <sip.voidptr object at 0x000001D4548644E0>
+2023-04-13 13:09:58 debug core.manager Activation success: True
+2023-04-13 13:09:58 info core.manager Loading module ".logic.fit_logic"
+2023-04-13 13:10:04 info core.manager Configuring FitLogic as fitlogic
+2023-04-13 13:10:04 info logic.fit_logic.FitLogic Methods were included to FitLogic, but only if naming is right: check the doxygen documentation if you added a new method and it does not show.
+2023-04-13 13:10:04 debug core.threadmanager Creating thread: "mod-logic-fitlogic".
+2023-04-13 13:10:04 debug logic.fit_logic.FitLogic Activation in thread <sip.voidptr object at 0x000001D45C353750>
+2023-04-13 13:10:04 debug core.manager Activation success: True
+2023-04-13 13:10:04 info core.manager Loading module ".logic.optimizer_logic"
+2023-04-13 13:10:04 info core.manager Configuring OptimizerLogic as optimizerlogic
+2023-04-13 13:10:04 info core.manager Connecting logic.optimizerlogic.confocalscanner1 to logic.scanner_tilt_interfuse
+2023-04-13 13:10:04 info core.manager Connecting logic.optimizerlogic.fitlogic to logic.fitlogic
+2023-04-13 13:10:04 debug core.threadmanager Creating thread: "mod-logic-optimizerlogic".
+2023-04-13 13:10:04 debug logic.optimizer_logic.OptimizerLogic Activation in thread <sip.voidptr object at 0x000001D45C38C330>
+2023-04-13 13:10:04 debug core.manager Activation success: True
+2023-04-13 13:10:04 debug core.manager Activation success: True
+2023-04-13 13:14:16 info core.manager Loading module ".logic.save_logic"
+2023-04-13 13:14:16 info core.manager Configuring SaveLogic as savelogic
+2023-04-13 13:14:16 debug core.threadmanager Creating thread: "mod-logic-savelogic".
+2023-04-13 13:14:16 debug logic.save_logic.SaveLogic Activation in thread <sip.voidptr object at 0x000001D45C406540>
+2023-04-13 13:14:16 info logic.save_logic.SaveLogic Creating directory for today's data in 
+C:/Data\2023\04\20230413
+2023-04-13 13:14:16 debug core.manager Activation success: True
+2023-04-13 13:14:16 info core.manager Loading module ".logic.confocal_logic"
+2023-04-13 13:14:16 info core.manager Configuring ConfocalLogic as scannerlogic
+2023-04-13 13:14:16 info core.manager Connecting logic.scannerlogic.confocalscanner1 to logic.scanner_tilt_interfuse
+2023-04-13 13:14:16 info core.manager Connecting logic.scannerlogic.savelogic to logic.savelogic
+2023-04-13 13:14:17 debug core.threadmanager Creating thread: "mod-logic-scannerlogic".
+2023-04-13 13:14:17 debug logic.confocal_logic.ConfocalLogic Activation in thread <sip.voidptr object at 0x000001D45D472FC0>
+2023-04-13 13:14:17 debug core.manager Activation success: True
+2023-04-13 13:14:17 info core.manager Loading module ".gui.confocal.confocalgui"
+2023-04-13 13:14:17 info core.manager Configuring ConfocalGui as confocal
+2023-04-13 13:14:17 info core.manager Connecting gui.confocal.confocallogic1 to logic.scannerlogic
+2023-04-13 13:14:17 info core.manager Connecting gui.confocal.savelogic to logic.savelogic
+2023-04-13 13:14:17 info core.manager Connecting gui.confocal.optimizerlogic1 to logic.optimizerlogic
+2023-04-13 13:14:17 debug gui.confocal.confocalgui.ConfocalGui Activation in thread <sip.voidptr object at 0x000001D45D49DF60>
+2023-04-13 13:14:18 debug core.manager Activation success: True
+2023-04-13 13:41:49 info logic.optimizer_logic.OptimizerLogic Optimised from (-5.451e-05,-7.751e-05,0.000e+00) to local maximum at (-5.475e-05,-7.759e-05,-9.487e-07).
+2023-04-13 13:45:58 info logic.optimizer_logic.OptimizerLogic Optimised from (-4.975e-05,-7.738e-05,-9.487e-07) to local maximum at (-4.983e-05,-7.748e-05,-1.305e-06).
+2023-04-13 13:55:40 info logic.optimizer_logic.OptimizerLogic Optimised from (-7.609e-06,-2.114e-05,-1.305e-06) to local maximum at (-7.570e-06,-2.105e-05,1.862e-07).
+2023-04-13 14:06:17 info logic.optimizer_logic.OptimizerLogic Optimised from (-5.045e-05,-7.997e-05,-1.300e-06) to local maximum at (-5.055e-05,-7.954e-05,-9.432e-07).
+2023-04-13 14:08:29 error root 
+Traceback (most recent call last):
+  File "C:\Users\Public\confocal\qudi-master\qudi-master\logic\confocal_logic.py", line 567, in start_scanner
+    self.module_state.lock()
+  File "C:\Users\Public\confocal\qudi-master\venv3\lib\site-packages\fysom\__init__.py", line 272, in fn
+    "event %s inappropriate in current state %s" % (event, self.current))
+fysom.FysomError: event lock inappropriate in current state locked
+2023-04-13 14:13:44 info logic.optimizer_logic.OptimizerLogic Optimised from (-6.127e-05,-8.184e-05,-5.094e-05) to local maximum at (-6.128e-05,-8.164e-05,-5.139e-05).
+2023-04-13 14:14:12 info core.manager Loading module ".logic.counter_logic"
+2023-04-13 14:14:12 info core.manager Configuring CounterLogic as counterlogic
+2023-04-13 14:14:12 debug logic.counter_logic.CounterLogic The following configuration was found.
+2023-04-13 14:14:12 debug logic.counter_logic.CounterLogic module.Class: counter_logic.CounterLogic
+2023-04-13 14:14:12 debug logic.counter_logic.CounterLogic connect: OrderedDict([('counter1', 'nicard_6363'), ('savelogic', 'savelogic')])
+2023-04-13 14:14:12 info core.manager Connecting logic.counterlogic.counter1 to hardware.nicard_6363
+2023-04-13 14:14:12 info core.manager Connecting logic.counterlogic.savelogic to logic.savelogic
+2023-04-13 14:14:12 debug core.threadmanager Creating thread: "mod-logic-counterlogic".
+2023-04-13 14:14:12 debug logic.counter_logic.CounterLogic Activation in thread <sip.voidptr object at 0x000001D45C4065D0>
+2023-04-13 14:14:12 debug core.manager Activation success: True
+2023-04-13 14:14:12 info core.manager Loading module ".gui.counter.countergui"
+2023-04-13 14:14:12 info core.manager Configuring CounterGui as counter
+2023-04-13 14:14:12 info core.manager Connecting gui.counter.counterlogic1 to logic.counterlogic
+2023-04-13 14:14:12 debug gui.counter.countergui.CounterGui Activation in thread <sip.voidptr object at 0x000001D44F7635A0>
+2023-04-13 14:14:12 debug core.manager Activation success: True
+2023-04-13 14:15:19 error logic.optimizer_logic.OptimizerLogic Error: 2D Gaussian Fit was not successfull!.
+2023-04-13 14:15:22 info logic.optimizer_logic.OptimizerLogic Optimised from (-6.135e-05,-8.153e-05,-5.139e-05) to local maximum at (-6.135e-05,-8.153e-05,-4.909e-05).
